@@ -1,0 +1,269 @@
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+*:before, *:after
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+body
+	min-width: 320px
+	position: relative
+	line-height: 1.4
+	font-weight: 400
+	overflow-x: hidden
+	margin: 0
+	height: 100vh
+	font-family: 'Roboto Serif', serif
+	
+p
+	margin: 0
+
+a
+	text-decoration: none
+	outline: none
+	display: inline-block
+	color: #000
+
+img
+	max-width: 100%
+	height: auto
+	vertical-align: bottom
+
+ul li,
+ol li
+	list-style: none
+	display: block
+	margin: 0
+
+span
+	display: inline-block
+
+ul, ol
+	display: block
+	margin: 0
+	padding-left: 0
+
+button
+	outline: none
+	border: 0
+	padding: 0
+	cursor: pointer
+
+h1, h2, h3, h4, h5, h6
+	margin: 0
+	font-weight: normal
+
+strong
+	display: inline-block
+
+.site-wrap
+	overflow: hidden
+.container
+	margin: 0 auto
+	position: relative
+	padding: 0 15px
+	max-width: 1030px
+	width: 100%
+
+//ColorVariables
+$colorBg1: #FAFAFA
+$colorBg2: #fff
+$colorButton: #EFEFF0
+$colorError: #FF392E
+$colorFrame: #EBEBF0
+$colorSite: #0100D3
+$colorTxt: #C5C5C7
+$colorBlue: #2F80ED
+$colorDark: #7B828A
+$colorGreen: #30DB5B
+$colorBlack: #262626
+$colorOrange: #F15A2C
+
+
+.page-address
+	&-title
+		font-size: 24px
+		color: $colorBlack
+	&-wrapper
+		margin-top: 24px
+		&__address-btn
+			position: relative
+			max-width: 395px
+			width: 100%
+			padding: 10px 20px
+			border: 1px solid $colorFrame
+			border-radius: 10px
+			cursor: pointer
+			transition: .3s
+			&--text
+				pointer-events: none
+				color: $colorBlack
+				font-size: 14px
+			&::after
+				content: url('../img/icon/plus.png')
+				position: absolute
+				top: 14px
+				right: 20px
+				transition: .3s
+			&:hover
+				transition: .3s
+				border-color: $colorGreen
+		&__add-address-list
+		&__action
+		&__subtitle
+			margin-bottom: 18px
+			font-size: 16px
+			color: $colorBlack
+			font-weight: 600
+		&__flex
+			display: flex
+			justify-content: space-between
+		&__form
+			max-width: 49%
+			width: 100%
+		&__form-control
+			margin-bottom: 8.5px
+			&:nth-child(3)
+				margin-bottom: 0
+			&--field
+				outline: none
+				border: 1px solid $colorFrame
+				width: 100%
+				padding: 20px
+				font-size: 16px
+				border-radius: 10px
+				&::placeholder
+					font-size: inherit
+					color: $colorTxt
+		&__form-checkbox
+			display: flex
+			align-items: center
+			margin: 20px 0
+			&--checkbox
+				opacity: 0 
+				width: 0 
+				height: 0 
+				z-index: -1
+				&:checked
+					& + span 
+						background-color: $colorGreen
+						&::before 
+							background-position: center center
+							background-image: url('../img/icon/ckecked.png')
+							transform: translateX(25px) 
+							background-color: $colorBg2
+			&--switch
+				position: relative 
+				display: inline-block 
+				width: 60px 
+				height: 34px
+			&--slide
+				position: absolute 
+				top: 0 
+				bottom: 0 
+				left: 0 
+				right: 0 
+				background-color: #EFEFEF
+				cursor: pointer 
+				border-radius: 34px 
+				transition: 0.4s 
+				&::before 
+					content: '' 
+					position: absolute 
+					left: 4px 
+					bottom: 3px 
+					height: 28px 
+					width: 28px 
+					background-color: #fff
+					background-image: url('../img/icon/off.png')
+					background-position: center center
+					background-repeat: no-repeat
+					border-radius: 50% 
+					transition: 0.4s
+			&--text
+				user-select: none
+				margin-left: 10px
+				color: $colorBlack
+				font-size: 16px
+				font-weight: 600
+		&__form-hide-fileds
+			display: flex
+			margin-bottom: 20px
+			&.active
+				display: none
+			&--field
+				outline: none
+				border: 1px solid $colorFrame
+				width: 100%
+				padding: 20px
+				font-size: 16px
+				border-radius: 10px
+				margin-left: 10px
+				&::placeholder
+					font-size: inherit
+					color: $colorTxt
+				&:first-child
+					margin-left: 0
+		&__form-buttons
+			margin-top: 30px
+			display: flex
+			justify-content: flex-end
+			&--cancel,
+			&--save
+				outline: none
+				border: none
+				color: $colorBlack
+				font-size: 16px
+				padding: 15px 50px
+				border-radius: 10px
+				cursor: pointer
+			&--cancel
+				background-color: $colorBg2
+				border: 1px solid $colorButton
+				margin-right: 20px
+			&--save
+				background-color: $colorButton
+		&__empty-address
+			margin-top: 49px
+			margin-left: 50px
+		&__map
+			width: 47%
+			margin-left: 40px
+			border-radius: 10px
+			overflow: hidden
+		&__saved-addresses
+			margin-top: 20px
+			&--line
+				margin-bottom: 10px
+				&:last-child
+					margin-bottom: 0
+			&--outline
+				padding: 8px 15px
+				border-radius: 10px
+				border: 1px solid $colorBlack
+			&--name
+				font-size: 12px
+				color: $colorTxt
+			&--address
+				font-size: 16px
+				color: $colorBlack
+			
